@@ -18,6 +18,7 @@ uma função javascript que verifique a validade dos números de telefone (fixo 
 digitados pelo usuário. Esta função deve ser chamada quando o valor do campo telefone 
 for modificado (crítica de campo) e deve exibir uma mensagem de alerta caso o valor do 
 campo não seja válido. As verificações são:
+
 a) Se o usuário não digitou 8 ou 9 caracteres dependendo do campo que ativou a 
 função (telefone tem 8 dígitos e celular tem 9 dígitos)
 A página então diz "Telefone tem de ter 8 dígitos!"
