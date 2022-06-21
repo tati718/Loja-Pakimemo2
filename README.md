@@ -22,10 +22,12 @@ campo não seja válido. As verificações são:
 a) Se o usuário não digitou 8 ou 9 caracteres dependendo do campo que ativou a 
 função (telefone tem 8 dígitos e celular tem 9 dígitos)
 A página então diz "Telefone tem de ter 8 dígitos!"
+
 "Celular tem de ter 9 dígitos"
 
 b) Se todos os caracteres digitados são dígitos, ou seja, se são caracteres entre 0 e 9
 o erro a página então informa uma crítica de erro, "Telefone só pode ter dígitos, $ caracter inválido!"
+
 Caso o valor seja válido, o usuário pode passar para o próximo campo do formulário sem 
 que nenhuma mensagem seja emitida.
 
