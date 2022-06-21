@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Discos</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <script>
+    var tabModelos = [
+      ["", "", "", "Vazio", 0],
+      ["Western Digital", "HD SATA III", "500 Gb", "HD_WD_500gb_70", 170],
+      ["Seagate", "HD SATA III", "1 Tb", "HD_Seagate_1Tb_70", 350],
+      ["Samdisk", "SSD SATA III", "480 Gb", "SSD_Samdisk_480Gb_70", 380],
+      ["Kingston", "SSD SATA III", "960 Gb", "SSD_Kingston_960Gb_70", 700],
+      ["Kingston", "SSD M2", "500Gb", "SSD_Kingston_M2_5000Gb_70", 410],
+      ["Western Digital", "SSD M2", "240 Gb", "SSD_WD_M2_240Gb_70", 270]];
+
+    function Mostra(tp, ind) {
+      var titu = document.getElementById("titDes");
+      var foto = document.getElementById("imgDes");
+      var prec = document.getElementById("prcDes");
+
+      titu.innerHTML = "<h2>" + tabModelos[ind][0]
+        + "</h2><br/>";
+      foto.src = "Imagens/" + tabModelos[ind][3]
+        + ".jpg";
+      prec.innerHTML = "<p> Interface: "
+        + tabModelos[ind][1] +
+        "</p><p> Capacidade : "
+        + tabModelos[ind][2] +
+        "</p><p> Preço: R$ "
+        + "<span classe = 'preco'>"
+        + tabModelos[ind][4]
+        + " ,00</span></p>";
+    }
+
+
+  </script>
+  <header>
+    <address class="ender">
+      Rua do Passo do Elefantinho, 123<br />
+      Tel: (21)4321-5678 <br />
+      <a href="mailto:contato@paquiderme.com.br">
+        contato@paquiderme.com.br
+      </a>
+    </address>
+    <p>
+      <img class="imgTopo" src="Imagens/PakiLogoTopo.png" />
+    </p>
+
+    <br />
+    <nav>
+      <ul>
+        <li><a href="PakiMemo.html">INICIAL</a></li>
+        <li><a href="Memorias.html">MEMÓRIAS</a></li>
+        <li><a href="Discos.html">HDs/SSDs</a></li>
+        <li><a href="Cadastro.html">CADASTRO</a></li>
+        <li><a href="Compras.html">COMPRAS</a></li>
+    </nav>
+    </ul>
+
+    <main>
+      <section>
+        <table class="tabDisco">
+          <tr>
+            <th colspan="5" class="tituloTabela">HDs e SSDs Internos</th>
+          </tr>
+          <tr>
+            <th class="linTH">Tipo/Interface</th>
+            <th class="linTH">Fabricante</th>
+            <th class=" linTH">Descrição</th>
+
+          </tr>
+          <tr>
+            <th rowspan="2" class="colTH">
+              HD Sata III</th>
+            <td class="colMenu">
+              <a target="_self" href="javascript:Mostra(0,1);">Western Digital
+              </a>
+            </td>
+            <td rowspan="6">
+              <div class="titDes">
+                <h2>&nbsp;</h2>
+              </div>
+              <img id="imgDes" src="Imagens/vazio.jpg" />
+              <div id="prcDes">&nbsp;<br />&nbsp;<br />&nbsp;</div>
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="colMenu"><a target="_self" href="javascript:Mostra(0,2);">Seagate</td></a>
+            </td>
+
+          </tr>
+
+          <tr>
+            <th rowspan="2" class="colTH">
+              SSD Sata III</th>
+            <td class="colMenu">
+              <a target="_self" href="javascript:Mostra(1,3);">Samdisk
+              </a>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="colMenu">
+              <a target="_self" href="javascript:Mostra(1,4);">Kingston
+              </a>
+            </td>
+
+          </tr>
+
+          <tr>
+            <th rowspan="2" class="colTH">
+              SSD M2</th>
+
+            <td class="colMenu"><a target="_self" href="javascript:Mostra(1,5);">Kingston</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="colMenu"><a target="_self" href="javascript:Mostra(1,6);">Western Digital</a>
+            </td>
+
+          </tr>
+
+
+        </table>
+      </section>
+    </main>
+</body>
+</header>
+
+
+</html>
